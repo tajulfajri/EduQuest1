@@ -1,0 +1,154 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/tips.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> 
+    <title>Menemukan Minat dan Bakat</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+<!-- Navbar Utama -->
+<nav class="navbar navbar-expand-lg bg-info py-3">
+  <div class="container d-flex align-items-center"> <!-- Tetap d-flex untuk container -->
+      <!-- Button Panah Kiri -->
+      <a href="{% url 'edu_app:dashboard' %}">
+      <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+      </button>
+    </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center"> <!-- Flex untuk menempatkan di tengah -->
+          <h5 class="text-white fw-bold mb-0">How to Find Your Interests, Talents and Potential</h5> <!-- Menggunakan mb-0 untuk menghilangkan margin bawah -->
+  </nav>
+  <div class="accordion" id="accordionPanelsStayOpenExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          1. Temukan Hal yang kamu sukai
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <p>Temukan hal yang paling kamu sukai dan ingin dilakukan setiap saat. Melalui cara ini, kamu akan lebih mudah dan cepat mengenal bakat minat dan potensi diri yang disukai.
+           </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          2. Amati Hobi
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p> Hobi tidak hanya digunakan untuk menenukan bakat, tetapi banyak orang menggunakan hobi untuk mengisi waktu luang serta mengasah hobi tersebut secara mendalam.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          3. Mencari Pengalaman
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p>
+            Terkadang manusia tidak pernah mengetahui apakah aktivitas yang dilakukan merupakan salah satu bakat yang dimiliki atau bukan.Cara mengetahui minat bakat dan potensi diri 
+            selanjutnya yaitu dengan mencari pengalaman yang banyak. Seperti yang diketahui jika aktivitas atau kegiatan sangat luas sehingga apa yang disukai mungkin saja belum pernah 
+            dipikirkan atau dilakukan. Alasan inilah yang kemudian mengharuskan kalian untuk mencari pengalaman sebanyak-banyaknya. Tujuannya supaya kalian merasakan pengalaman baru dan juga hal baru yang cukup menyenangkan. Bisa saja pengalaman baru yang didapatkan termasuk bakat yang terpendam.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          4. Melalui Kegiatan Ekstrakurikuler
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p>Cara lain yang bisa digunakan untuk mengetahui minat bakat adalah mengikuti kegiatan ekstrakurikuler di sekolah. Dimana kegiatan ekstrakurikuler tersebut bisa dijadikan wadah untuk mengembangkan bakat minat. Selain itu, manfaat lain dari kegiatan ekstrakurikuler adalah memupuk rasa tanggung jawab pribadi dan juga sosial serta memberikan bekal untuk mempersiapkan karir siswa.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          5. Mencari Poin Plus Di Dalam Diri
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p> Banyak orang tidak memiliki rasa percaya diri sehingga kesulitan menilai diri sendiri dan mencari kemampuan yang dimiliki. Jika kamu memiliki rasa percaya diri yang tinggi seharusnya harus bersyukur karena ini merupakan salah satu poin plus yang dimiliki.
+            Memiliki rasa percaya diri berarti kamu bisa dengan mudah menilai diri sendiri serta mencari kelebihan yang ada pada dirinya.Mengetahui kelebihan yang dimiliki akan memudahkan kamu dalam mengetahui minat bakat dan potensi diri sendiri.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          6. Sesuatu yang rasanya mudah dikerjakan
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p>
+            Pernah nggak, kalian heran karena seseorang dapat mengerjakan sesuatu, seperti menggambar, dengan begitu mudah - so effortlessly, gitu? Keliahatannya seperti cuma corat-coret di kertas sebentar, eh tetiba udah jadi sketsa yang menakjubkan. Kalau kalian bertanya pada mereka, “Bagaimana cara mengetahui bakat kita?” Jawaban yang bakal didapat mungkin akan seperti, “Kita? Kamu aja, kali!” Lah, orang dia tahu bakatnya menggambar, kok. Yang jadi pertanyaan, bakatmu apa?
+Salah satu cara mengetahui bakat kita yang terpendam adalah dengan mengikuti tes minat bakat. Sekarang ini sudah banyak tes minat bakat online. Aku Pintar bahkan punya serangkaian tes minat bakat, salah satunya Tes Kemampuan, agar Sobat Pintar mendapatkan hasil yang lebih akurat. Langsung dicoba saja, kalian.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          7. Bertanya pada sahabat, orang tua, wali kelas, atau guru BK
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p>Cara mengenali bakat dan minat sebenarnya cukup sederhana, bertanyalah pada orang-orang terpercaya di sekitarmu, entah sahabat, orang tua, atau guru. Terkadang orang lain dapat mengetahui minat dan bakat kita dengan lebih obyektif. Siapa tahu, barangkali  merasa berbakat menyanyi, sedangkan orang-orang yang mendengarmu bernyanyi berusaha menyelamatkanmu agar tak mempermalukan diri sendiri.
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+          8. Berani mencoba hal baru
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p>Kepo saja tak cukup, kalian harus mau dan berani mencoba hal-hal baru. Kita takkan pernah tahu bila kita berbakat atau mampu melakukan sesuatu sampai kita berani mencobanya, seperti menjahit, coding, atau olah raga baru, kan? Melakukan hal baru seperti ini justru menjadi cara mengembangkan bakat dan minat yang mungkin selama ini belum kita sadari.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+               
+      
+    <!-- End Example Code -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Quiz : My number is ten</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+   {%endblock %}
+    
+</head>
+<body>
+
+    {% block content %}
+    <!-- Navbar Utama -->
+  <nav class="navbar navbar-expand-lg bg-info py-3">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'edu_app:materimodul1class4' %}">
+        <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+        </button>
+      </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center">
+        <h5 class="text-white fw-bold mb-0">Quiz : My number is ten</h5>
+      </div>
+    </div>
+  </nav>
+  
+  <form method="post" action="{% url 'edu_app:quizmodul1class4' %}">
+    {% csrf_token %}
+    <input type="hidden" name="quiz_name" value="Modul 1">
+
+  <div class="container mt-4">
+    <div class="card">
+        <div class="card-body ">
+            1. What is the English word for the number "3"? 
+            <div class="form-check mt-3 ">
+                <input class="form-check-input" type="radio" name="question1" value="A" id="question1-option1" >
+                <label class="form-check-label" for="question1-option1">Two</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="B" id="question1-option2" >
+                <label class="form-check-label" for="question1-option2">Three </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="C" id="question1-option3" >
+                <label class="form-check-label" for="question1-option3">Four</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            2.	How do you spell the number "8" in English? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question2" value="A" id="question2-option1">
+                <label class="form-check-label" for="question2-option1">Eighteen</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="B" id="question2-option2">
+                <label class="form-check-label" for="question2-option2">Eight</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="C" id="question2-option3">
+                <label class="form-check-label" for="question2-option3">Eighty</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            3.	Which of the following is the number "15"?  
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question3" value="A" id="question3-option1">
+                <label class="form-check-label" for="question3-option1">Fifty</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="B" id="question3-option2">
+                <label class="form-check-label" for="question3-option2">Five</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="C" id="question3-option3">
+                <label class="form-check-label" for="question3-option3">Fifteen</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            4.	What is the English word for the number "20"? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question4" value="A" id="question4-option1">
+                <label class="form-check-label" for="question4-option1">Twelve</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="B" id="question4-option2">
+                <label class="form-check-label" for="question4-option2">Twenty</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="C" id="question4-option3">
+                <label class="form-check-label" for="question4-option3">Two</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            5.	What is "eleven" in numbers? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question5" value="A" id="question5-option1">
+                <label class="form-check-label" for="question5-option1">7</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="B" id="question5-option2">
+                <label class="form-check-label" for="question5-option2">11</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="C" id="question5-option3">
+                <label class="form-check-label" for="question5-option3">9</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            6. How do you write "thirteen" in numbers? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question6" value="A" id="question6-option1">
+                <label class="form-check-label" for="question6-option1">30</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="B" id="question6-option2">
+                <label class="form-check-label" for="question6-option2">13</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="C" id="question6-option3">
+                <label class="form-check-label" for="question6-option3">3</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body"> 
+            7.	Which one is the number "5"? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question7" value="A" id="question7-option1">
+                <label class="form-check-label" for="question7-option1">Four</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="B" id="question7-option2">
+                <label class="form-check-label" for="question7-option2">Five</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="C" id="question7-option3">
+                <label class="form-check-label" for="question7-option3">Fifteen</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            8.	What is "fourteen" in numbers? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question8" value="A" id="question8-option1">
+                <label class="form-check-label" for="question8-option1">40</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="B" id="question8-option2">
+                <label class="form-check-label" for="question8-option2">4</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="C" id="question8-option3">
+                <label class="form-check-label" for="question8-option3">14</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body ">
+            9.	Which of these numbers is "100" in English? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question9" value="A" id="question9-option1">
+                <label class="form-check-label" for="question9-option1">One Hundred</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9" value="B" id="question9-option2">
+                <label class="form-check-label" for="question9-option2">One Thousand</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9"  value="C" id="question9-option3">
+                <label class="form-check-label" for="question9-option3">Ten</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            10.	How do you spell the number "6" in English? 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question10" value="A" id="question10-option1">
+                <label class="form-check-label" for="question10-option1">Sixteen</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="B" id="question10-option2">
+                <label class="form-check-label" for="question10-option2">Sixty</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="C" id="question10-option3">
+                <label class="form-check-label" for="question10-option3">Six</label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                11.	What is the English word for the number "9"?  
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question11" value="A" id="q11a1">
+                    <label class="form-check-label" for="q11a1">Nineteen</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="B" id="q11a2">
+                    <label class="form-check-label" for="q11a2">Nine</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="C" id="q11a3">
+                    <label class="form-check-label" for="q11a3">Ninety</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                12.	How do you write "seventeen" in numbers? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question12" value="A" id="q12a1">
+                    <label class="form-check-label" for="q12a1">17</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12" value="B" id="q12a2">
+                    <label class="form-check-label" for="q12a2">7</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12"  value="C" id="q12a3">
+                    <label class="form-check-label" for="q12a3">70</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                13.	Which one is the number "50"? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question13" value="A" id="q13a1">
+                    <label class="form-check-label" for="q13a1">Fifteen</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="B" id="q13a2">
+                    <label class="form-check-label" for="q13a2">Fifty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="C" id="q13a3">
+                    <label class="form-check-label" for="q13a3">Five</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                14.	What is "seventy" in numbers? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question14" value="A" id="q14a1">
+                    <label class="form-check-label" for="q14a1">7</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="B" id="q14a2">
+                    <label class="form-check-label" for="q14a2">70</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="C" id="q14a3">
+                    <label class="form-check-label" for="q14a3">77</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                15.	What is the English word for the number "12"? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question15" value="A" id="q15a1">
+                    <label class="form-check-label" for="q15a1">Ten</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="B" id="q15a2">
+                    <label class="form-check-label" for="q15a2">Eleven</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="C" id="q15a3">
+                    <label class="form-check-label" for="q15a3">Twelve</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                16.	How do you write "thirty" in numbers? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question16" value="A" id="q16a1">
+                    <label class="form-check-label" for="q16a1">13</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="B" id="q16a2">
+                    <label class="form-check-label" for="q16a2">3</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="C" id="q16a3">
+                    <label class="form-check-label" for="q16a3">30</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                17.	What is "nineteen" in numbers? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question17" value="A" id="q17a1">
+                    <label class="form-check-label" for="q17a1">9</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="B" id="q17a2">
+                    <label class="form-check-label" for="q17a2">19</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="C" id="q17a3">
+                    <label class="form-check-label" for="q17a3">90</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                18.	How do you spell the number "10" in English? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question18" value="A" id="q18a1">
+                    <label class="form-check-label" for="q18a1">Ten</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="B" id="q18a2">
+                    <label class="form-check-label" for="q18a2">Twenty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="C" id="q18a3">
+                    <label class="form-check-label" for="q18a3">Two</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                19.	Which one is the number "4"? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question19" value="A" id="q19a1">
+                    <label class="form-check-label" for="q19a1">Forty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="B" id="q19a2">
+                    <label class="form-check-label" for="q19a2">Four</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="C" id="q19a3">
+                    <label class="form-check-label" for="q19a3">Fourteen</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                20.	What is the English word for the number "18"? 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question20" value="A" id="q20a1">
+                    <label class="form-check-label" for="q20a1">Eighty</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="B" id="q20a2">
+                    <label class="form-check-label" for="q20a2">Eighteen</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="C" id="q20a3">
+                    <label class="form-check-label" for="q20a3">Eight</label>
+                </div>
+            </div>
+        </div>
+    
+    <a href="{% url 'edu_app:quizresult' %}">
+    <div class="d-flex justify-content-end mb-4">
+        <button class="btn btn-primary" onclick="alert('Terima kasih telah mengikuti kuis!')">Kirim Kuis</button>
+    </div>
+</div>
+</a>
+</form>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+</body>
+</html>
+

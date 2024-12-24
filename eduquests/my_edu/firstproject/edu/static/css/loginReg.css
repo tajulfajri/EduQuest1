@@ -1,0 +1,201 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Navbar start */
+.hero-box .box p {
+    width: 500px;
+}
+
+.hero-box .box img {
+    width: 400px;
+}
+
+.sign a {
+    background-color: #e4a634;
+}
+
+.sign a:hover {
+    background-color: #e4cf34;
+}
+
+/* Mengatur properti Flexbox pada body agar formulir login berada di tengah halaman */
+body {
+    background-image: url('static/img/logobar.jpg');
+    /* Nama file gambar yang ingin dijadikan background */
+    background-size: cover;
+    /* Agar gambar memenuhi seluruh halaman */
+    background-position: center;
+    /* Menempatkan gambar di tengah */
+    background-repeat: no-repeat;
+    /* Agar gambar tidak berulang */
+    min-height: 100vh;
+    /* Memastikan tinggi halaman sama dengan tinggi viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Memastikan konten (login form) diatur di antara navbar dan footer */
+}
+
+/* Mengatur tampilan card (kotak login) */
+.card {
+    border-radius: 70px;
+    /* Membuat sudut-sudut kotak lebih melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Menambahkan efek bayangan */
+    background: rgba(255, 255, 255, 0.9);
+    /* Latar belakang card berwarna putih dengan opacity */
+    max-width: 400px;
+    /* Mengatur lebar maksimal card */
+    width: 50%;
+    margin: auto;
+    /* Memusatkan card di tengah */
+}
+
+/* Mengatur jarak dan tampilan isi card */
+.card-body {
+    padding: 20px;
+    /* Mengatur jarak dalam card */
+    text-align: center;
+    /* Memusatkan teks dan gambar */
+}
+
+/* Mengatur ukuran dan posisi gambar logo */
+.card-img-top {
+    width: 100px;
+    /* Ukuran gambar logo */
+    margin: 0 auto;
+    /* Memposisikan gambar di tengah */
+    display: block;
+}
+
+/* Mengatur tampilan teks judul (Login) */
+h2 {
+    color: #333;
+    /* Warna untuk teks judul */
+    margin-bottom: 5px;
+    /* Memberi jarak bawah pada teks */
+    font-family: 'Georgia', sans-serif;
+    /* Jenis font */
+    font-weight: 700;
+}
+
+/* Mengatur label (Username dan Password) */
+.form-group label {
+    color: #555;
+    /* Warna label */
+    font-weight: bold;
+    /* Teks tebal */
+    font-size: 14px;
+    /* Ukuran teks */
+    text-align: left;
+    display: block;
+    line-height: 2.5em;
+}
+
+/* Mengatur input (kotak untuk memasukkan teks) */
+.form-control {
+    border-radius: 10px;
+    /* Membuat sudut kotak input melengkung */
+    padding: 10px;
+    /* Memberi jarak dalam kotak input */
+    font-size: 14px;
+    /* Ukuran teks dalam input */
+}
+
+/* Mengatur tombol login */
+.btn-primary {
+    background-color: #00a1c6;
+    /* Warna biru pada tombol */
+    border: none;
+    /* Menghilangkan garis tepi tombol */
+    border-radius: 100px;
+    /* Membuat sudut tombol melengkung */
+    font-size: 16px;
+    /* Ukuran teks tombol */
+    padding: 10px;
+    /* Jarak dalam tombol */
+    width: 200px;
+    /* Mengatur lebar tombol */
+    display: block;
+    margin: 20px auto;
+    /* Memusatkan tombol */
+    cursor: pointer;
+}
+
+/* Mengatur tombol saat di-hover */
+.btn-primary:hover {
+    background-color: #007A9C;
+    /* Warna biru yang lebih gelap saat tombol di-hover */
+}
+
+/* Mengatur warna link */
+a {
+    color: #00a1c6;
+    /* Warna biru pada link */
+    text-decoration: none;
+    /* Menghilangkan garis bawah pada link */
+}
+
+/* Mengatur link ketika di-hover */
+a:hover {
+    color: #000406;
+    /* Warna lebih gelap ketika link di-hover */
+}
+
+/* Mengatur label untuk checkbox */
+.form-check-label {
+    color: #4d4d4d;
+    /* Warna abu-abu pada label checkbox */
+}
+
+/* Mengatur warna checkbox */
+.form-check-input {
+    accent-color: #12526d;
+    /* Warna  pada checkbox remember me */
+}
+
+/* Mengatur posisi link Forget Password di sebelah kanan */
+.float-right {
+    color: #00a1c6;
+    font-size: 14px;
+    position: relative;
+}
+
+/* footer start */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: left;
+    margin-top: auto;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-box .col a {
+    color: #00a1c6;
+    text-decoration: none;
+    opacity: 75%;
+}
+
+.footer-box .col a:hover {
+    opacity: 100%;
+}
+
+.copyright {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #888;
+}
+
+.footer .b1 {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    color: white; 
+    line-height: 1;
+  }
+/* footer end */

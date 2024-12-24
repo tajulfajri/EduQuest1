@@ -1,0 +1,335 @@
+{% extends 'edu_app/base.html' %}
+{% load static %}
+
+{% block body_block %}
+<!-- Section awal start -->
+<section class="hero overflow-hidden">
+  <div class="container">
+    <div
+      class="hero-box p-3 d-flex align-items-center justify-content-between flex-md-row flex-column gap-md-0 gap-5">
+      <div class="box animate__animated animate__fadeInLeft animate__delay-1s">
+        <h1 class="fw-bold mb-3">
+          <span class="text-warning">Welcome to </span><span class="text-info">EduQuest</span>
+        </h1>
+        <p class="lh-lg mb-4"><strong>EduQuest</strong>, membantu anak-anak belajar dengan cara yang
+          menyenangkan, sekaligus menyediakan
+          alat yang berguna bagi orang tua dan guru untuk memantau dan mendukung kemajuan belajar
+          anak-anak mereka.</p>
+        <div>
+          <a href="" class="btn btn-info text-white">Mulai Belajar</a>
+          <a href="" class="btn btn-outline-warning">Tentang Kami</a>
+        </div>
+      </div>
+      <div class="box animate__animated animate__fadeInRight animate__delay-1s">
+        <img src="{% static 'img/logobarus.jpg' %}" alt="Logo Image" />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section awal end -->
+
+
+<!-- Section grid start -->
+<section class="grid" id="grid">
+  <div class="container">
+    <div class="grid-box">
+      <h1 class="fw-bold mb-3" data-aos="fade-up" data-aos-duration="1000"><span
+          class="text-warning">Kon</span><span class="text-info">ten</span></h1>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Macam-macam kelas yang bisa diikuti</p>
+      <div class="row g-3 text-center pt-2">
+        <div id="carouselExampleRide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-fluid img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Vocabulary</h4>
+                    <p class="lh-lg">Kelas Vocabulary memperkenalkan kosakata dasar seperti warna, angka, benda
+                      sehari-hari, hewan, dan makanan sehingga belajar jadi lebih menyenangkan dan efektif.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Grammar Sederhana</h4>
+                    <p class="lh-lg">Kelas Simple Grammar mengajarkan tata bahasa dasar, termasuk kata benda,
+                      kata kerja, kata sifat, dan Simple Present Tense. Anak-anak belajar membuat kalimat
+                      sederhana sehari-hari.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Pronunciation Practice</h4>
+                    <p class="lh-lg">Kelas Pronunciation Practice melatih pengucapan kata dan frasa melalui
+                      fonik, pelafalan, tongue twisters, Termasuk kegiatan aktivitas mendengarkan dan menirukan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Speaking and Listening</h4>
+                    <p class="lh-lg">Kelas Speaking and Listening melatih berbicara dan mendengarkan melalui
+                      dialog sederhana, percakapan dua arah, serta latihan mendengarkan dengan instruksi video dan
+                      audio menarik.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Reading Comprehension</h4>
+                    <p class="lh-lg">Kelas Reading Comprehension meningkatkan kemampuan membaca melalui cerita
+                      bergambar, di mana anak-anak menjawab pertanyaan dan mengenal kosakata baru dari dongeng
+                      atau fabel.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-white rounded-4">
+                    <img src="{% static 'img/2.png' %}" class="img-thumbnail" alt="...">
+                    <h4 class="mb-3 fw-bold">Games and Songs</h4>
+                    <p class="lh-lg">Kelas Games and Songs mengajarkan bahasa Inggris melalui lagu dan permainan
+                      edukatif seperti bingo dan crossword puzzles, dimana anak-anak belajar dengan cara yang
+                      menyenangkan.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section grid end -->
+
+<!-- Section faq start -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-box pt-4">
+      <h1 class="fw-bold mb-3 text-center" data-aos="fade-up" data-aos-duration="1000"><span
+          class="text-warning">FAQ</span><span class="text-info">s</span></h1>
+      <p class="text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Temukan jawaban atas
+        pertanyaan-pertanyaan umum yang sering diajukan mengenai layanan platform ini.</p>
+
+      <div class="accordion pt-4" id="accordionExample">
+        <div class="row row-cols-md-2 row-cols-1 g-4">
+          <div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  Apakah Platform Pendidikan ini cocok untuk Anak-anak?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Ya, platform ini dirancang khusus untuk anak-anak usia 6-12 tahun,</strong> dengan
+                  pendekatan yang menyenangkan dan interaktif. Setiap materi diatur dengan bahasa sederhana dan
+                  disampaikan melalui aktivitas menarik seperti permainan, lagu, cerita, serta latihan berbicara dan
+                  mendengarkan. Kelas-kelasnya dibuat agar anak-anak mudah memahami kosakata dan tata bahasa dasar
+                  bahasa Inggris.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                  aria-controls="collapseTwo">
+                  Apakah Platform ini Gratis?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Ya, sejauh ini seluruh layanan di platform tersedia secara gratis.</strong> Kami belum
+                  menyediakan layanan premium, sehingga semua pengguna memiliki akses penuh ke seluruh materi
+                  pembelajaran tanpa biaya tambahan. Ini memastikan bahwa setiap anak dapat belajar bahasa Inggris
+                  tanpa kendala biaya, asalkan mereka memiliki akses internet. Jadi, orang tua tidak perlu khawatir
+                  tentang biaya berlangganan atau pembayaran fitur tambahan untuk saat ini.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                  aria-controls="collapseThree">
+                  Bagaimana cara mengakses Layanan ini?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Platform ini sangat mudah diakses dari perangkat apa pun,</strong> seperti komputer, tablet,
+                  atau ponsel, selama terhubung dengan internet. Anda hanya perlu membuat akun terlebih dahulu,
+                  memilih kelas yang sesuai, dan anak-anak bisa mulai belajar kapan saja. Antarmuka yang sederhana dan
+                  ramah anak memudahkan mereka untuk menjelajahi materi pembelajaran.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                  aria-controls="collapseFour">
+                  Apakah Layanan Platform ini dapat diakses Selamanya?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Ya, selama pengguna tetap terhubung ke internet,</strong> mereka dapat mengakses semua
+                  materi di platform ini kapan saja. Tidak ada batasan waktu penggunaan, sehingga anak-anak dapat
+                  belajar sesuai ritme mereka sendiri. Platform ini memberi fleksibilitas bagi anak-anak untuk
+                  mengulang pelajaran kapan saja mereka butuhkan. Semua materi akan terus tersedia tanpa batas waktu
+                  atau biaya tambahan, memungkinkan proses belajar yang berkelanjutan.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                  aria-controls="collapseFive">
+                  Apakah platform ini menyediakan tes atau evaluasi belajar?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Ya, kami menyediakan berbagai kuis, dan latihan</strong> yang tersebar di setiap kelas untuk
+                  memastikan anak-anak dapat mengevaluasi pemahaman mereka terhadap materi yang sudah dipelajari.
+                  Evaluasi ini dirancang dalam format yang menarik, seperti permainan kuis, sehingga anak-anak tetap
+                  termotivasi. Setelah menyelesaikan setiap bagian materi, anak-anak bisa mengerjakan kuis untuk
+                  melihat sejauh mana mereka telah memahami topik tertentu. Orang tua juga bisa melihat hasil kuis ini
+                  untuk memantau perkembangan anak.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-info text-white fw-bold lh-lg" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true"
+                  aria-controls="collapseSix">
+                  Apakah platform ini bisa digunakan di semua perangkat?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>Ya, platform ini dirancang agar bisa diakses dari berbagai perangkat, termasuk komputer,
+                    tablet, dan ponsel.</strong> Selama perangkat tersebut terhubung ke internet, anak-anak bisa
+                  menggunakan platform kapan saja dan di mana saja. Antarmuka yang responsif memastikan bahwa
+                  pengalaman belajar tetap nyaman, baik di layar besar seperti komputer atau layar kecil seperti
+                  ponsel. Ini memungkinkan fleksibilitas dalam belajar, baik di rumah, di sekolah, atau bahkan saat
+                  bepergian.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section faq end -->
+
+<!-- Section rating start -->
+<section class="rate">
+  <div class="container bg-body-tertiary py-3">
+    <div class="rating pt-5">
+      <h1 class="fw-bold mb-3 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><span
+          class="text-warning">Testi</span><span class="text-info">monials</span></h1>
+      <div class="rating-box">
+        <div class="rating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+          <div class="card shadow-sm rounded-3 p-2">
+            <div class="card-body">
+              <p class="card-text">"Sebagai guru, saya merekomendasikan platform ini kepada murid-murid saya.
+                Materinya menarik dan sangat sesuai untuk usia anak-anak. Fitur interaktifnya juga membuat anak-anak
+                lebih termotivasi untuk belajar."</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <div class="d-flex align-items-center pt-4">
+                <img src="..." alt="">
+                <div>
+                  <h5 class="card-title fw-bold">Andi Setiawan</h5>
+                  <span class="text-secondary">Guru SD</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+          <div class="card shadow-sm rounded-3 p-2">
+            <div class="card-body">
+              <p class="card-text">"Platform ini sangat membantu anak saya dalam belajar bahasa Inggris dengan cara
+                yang menyenangkan. Saya senang melihat kemajuannya, dan yang paling penting, semuanya gratis dan mudah
+                diakses dari ponsel kami!"</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <div class="d-flex align-items-center pt-4">
+                <img src="..." alt="">
+                <div>
+                  <h5 class="card-title fw-bold">Saras Wati</h5>
+                  <span class="text-secondary">Ibu Rumah Tangga</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rating-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+          <div class="card shadow-sm rounded-3 p-2">
+            <div class="card-body">
+              <p class="card-text">"Platform ini adalah solusi yang hebat untuk anak-anak usia 6-12 tahun yang ingin
+                belajar bahasa Inggris. Dengan pendekatan yang ramah anak dan tanpa biaya, ini sangat cocok untuk
+                memperkenalkan bahasa Inggris secara menyenangkan."</p>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <div class="d-flex align-items-center pt-4">
+                <img src="..." alt="">
+                <div>
+                  <h5 class="card-title fw-bold">Dina Sari</h5>
+                  <span class="text-secondary">Konsultan Pendidikan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section rating end -->
+{% endblock %}

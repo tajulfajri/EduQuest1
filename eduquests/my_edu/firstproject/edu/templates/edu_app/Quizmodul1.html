@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Quiz : How Are You?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+   {%endblock %}
+    
+</head>
+<body>
+
+    {% block content %}
+    <!-- Navbar Utama -->
+  <nav class="navbar navbar-expand-lg bg-info py-3">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'edu_app:materimodul1' %}">
+        <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+        </button>
+      </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center">
+        <h5 class="text-white fw-bold mb-0">Quiz : How Are You?</h5>
+      </div>
+    </div>
+  </nav>
+  
+  <form method="post" action="{% url 'edu_app:Quizmodul1' %}">
+    {% csrf_token %}
+    <input type="hidden" name="quiz_name" value="Kelas 1 Modul 1">
+
+  <div class="container mt-4">
+    <div class="card">
+        <div class="card-body ">
+            1. Apa yang kamu katakan di pagi hari?
+            <div class="form-check mt-3 ">
+                <input class="form-check-input" type="radio" name="question1" value="Good Night" id="question1-option1" >
+                <label class="form-check-label" for="question1-option1">Good Night</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="Good Morning" id="question1-option2" >
+                <label class="form-check-label" for="question1-option2">Good Morning</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="Good Evening" id="question1-option3" >
+                <label class="form-check-label" for="question1-option3">Good Evening</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            2. Apa yang kamu katakan di malam hari sebelum tidur?
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question2" value="Good Night" id="question2-option1">
+                <label class="form-check-label" for="question2-option1">Good Night</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="Good Afternoon" id="question2-option2">
+                <label class="form-check-label" for="question2-option2">Good Afternoon</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="Good Morning" id="question2-option3">
+                <label class="form-check-label" for="question2-option3">Good Morning</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            3. "Good evening" digunakan pada waktu...
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question3" value="Pagi" id="question3-option1">
+                <label class="form-check-label" for="question3-option1">Pagi</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="Siang" id="question3-option2">
+                <label class="form-check-label" for="question3-option2">Siang</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="Sore/Malam" id="question3-option3">
+                <label class="form-check-label" for="question3-option3">Sore/Malam</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            4. Ketika bertemu teman di siang hari, kamu bisa mengatakan...
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question4" value="Good Night" id="question4-option1">
+                <label class="form-check-label" for="question4-option1">Good Night</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="Good Afternoon" id="question4-option2">
+                <label class="form-check-label" for="question4-option2">Good Afternoon</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="Good Morning" id="question4-option3">
+                <label class="form-check-label" for="question4-option3">Good Morning</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            5. Bagaimana cara menanyakan kabar seseorang?
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question5" value="How are you?" id="question5-option1">
+                <label class="form-check-label" for="question5-option1">How are you?</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="How old are you?" id="question5-option2">
+                <label class="form-check-label" for="question5-option2">How old are you?</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="What is your name?" id="question5-option3">
+                <label class="form-check-label" for="question5-option3">What is your name?</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            6. Jika kamu merasa senang, kamu bisa menjawab...    
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question6" value="Im Tired" id="question6-option1">
+                <label class="form-check-label" for="question6-option1">I'm Tired</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="Im Happy" id="question6-option2">
+                <label class="form-check-label" for="question6-option2">I'm Happy</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="Im Sad" id="question6-option3">
+                <label class="form-check-label" for="question6-option3">I'm Sad</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body"> 
+            7. Apa yang kamu katakan jika kamu merasa lelah?
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question7" value="Im Fine" id="question7-option1">
+                <label class="form-check-label" for="question7-option1">I'm Fine</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="Im Tired" id="question7-option2">
+                <label class="form-check-label" for="question7-option2">I'm Tired</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="Im Happy" id="question7-option3">
+                <label class="form-check-label" for="question7-option3">I'm Happy</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            8. "Good morning" digunakan pada waktu...
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question8" value="Pagi" id="question8-option1">
+                <label class="form-check-label" for="question8-option1">Pagi</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="Sore" id="question8-option2">
+                <label class="form-check-label" for="question8-option2">Sore</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="Malam" id="question8-option3">
+                <label class="form-check-label" for="question8-option3">Malam</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body ">
+            9. Ketika guru mengatakan "Good afternoon," kamu menjawab... 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question9" value="Good Morning" id="question9-option1">
+                <label class="form-check-label" for="question9-option1">Good Morning</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9" value="Good Afternoon" id="question9-option2">
+                <label class="form-check-label" for="question9-option2">Good Afternoon</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9"  value="Good Night" id="question9-option3">
+                <label class="form-check-label" for="question9-option3">Good Night</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            10. Ketika kamu bertemu teman pada malam hari, kamu bisa mengatakan...
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question10" value="Good Night" id="question10-option1">
+                <label class="form-check-label" for="question10-option1">Good Night</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="Good Morning" id="question10-option2">
+                <label class="form-check-label" for="question10-option2">Good Morning</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="Good Evening" id="question10-option3">
+                <label class="form-check-label" for="question10-option3">Good Evening</label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>11. Kamu ingin mengucapkan selamat malam kepada ibu, apa yang kamu katakan?</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question11" value="Good Night" id="q11a1">
+                    <label class="form-check-label" for="q11a1">Good Night</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="Good Evening" id="q11a2">
+                    <label class="form-check-label" for="q11a2">Good Evening</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="Good Morning" id="q11a3">
+                    <label class="form-check-label" for="q11a3">Good Morning</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>12. "How are you?" artinya...</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question12" value="Apa Kabar?" id="q12a1">
+                    <label class="form-check-label" for="q12a1">Apa Kabar?</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12" value="Selamat Tidur" id="q12a2">
+                    <label class="form-check-label" for="q12a2">Selamat Tidur</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12"  value="Selamat Datang" id="q12a3">
+                    <label class="form-check-label" for="q12a3">Selamat Datang</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>13. Jika kamu merasa baik, kamu menjawab...</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question13" value="Im Fine, Thank You" id="q13a1">
+                    <label class="form-check-label" for="q13a1">I'm Fine, Thank You</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="Im Tired" id="q13a2">
+                    <label class="form-check-label" for="q13a2">I'm Tired</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="Im Not Fine" id="q13a3">
+                    <label class="form-check-label" for="q13a3">I'm Not Fine</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>14. Kapan kita mengucapkan "Good afternoon"?</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question14" value="Pagi Hari" id="q14a1">
+                    <label class="form-check-label" for="q14a1">Pagi Hari</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="Siang Hari" id="q14a2">
+                    <label class="form-check-label" for="q14a2">Siang Hari</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="Malam Hari" id="q14a3">
+                    <label class="form-check-label" for="q14a3">Malam Hari</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>15. Kamu ingin tidur, apa yang kamu katakan kepada ayahmu?</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question15" value="Good Morning" id="q15a1">
+                    <label class="form-check-label" for="q15a1">Good Morning</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="Good Night" id="q15a2">
+                    <label class="form-check-label" for="q15a2">Good Night</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="Good Afternoon" id="q15a3">
+                    <label class="form-check-label" for="q15a3">Good Afternoon</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>16. Apa yang kamu katakan ketika bertemu seseorang di sore hari?</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question16" value="Good Afternoon" id="q16a1">
+                    <label class="form-check-label" for="q16a1">Good Afternoon</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="Good Night" id="q16a2">
+                    <label class="form-check-label" for="q16a2">Good Night</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="Good Evening" id="q16a3">
+                    <label class="form-check-label" for="q16a3">Good Evening</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>17. "Good night" digunakan saat...</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question17" value="Siang" id="q17a1">
+                    <label class="form-check-label" for="q17a1">Siang</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="Sore" id="q17a2">
+                    <label class="form-check-label" for="q17a2">Sore</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="Akan Tidur" id="q17a3">
+                    <label class="form-check-label" for="q17a3">Akan Tidur</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>18. Bagaimana menjawab "How are you?" jika kamu merasa senang?</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question18" value="Im Fine, Thank You" id="q18a1">
+                    <label class="form-check-label" for="q18a1">I'm Fine, Thank You</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="Im Bored" id="q18a2">
+                    <label class="form-check-label" for="q18a2">I'm Bored</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="Im Hungry" id="q18a3">
+                    <label class="form-check-label" for="q18a3">I'm Hungry</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>19. "How do you do?" adalah ungkapan untuk...</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question19" value="Bertanya kabar" id="q19a1">
+                    <label class="form-check-label" for="q19a1">Bertanya Kabar</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="Berkenalan" id="q19a2">
+                    <label class="form-check-label" for="q19a2">Berkenalan</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="Menanyakan Nama" id="q19a3">
+                    <label class="form-check-label" for="q19a3">Menanyakan Nama</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                <p>20. Jika seseorang berkata "Goodbye", kamu bisa menjawab...</p>
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question20" value="See You Later" id="q20a1">
+                    <label class="form-check-label" for="q20a1">See You Later</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="Welcome" id="q20a2">
+                    <label class="form-check-label" for="q20a2">Welcome</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="Good Night" id="q20a3">
+                    <label class="form-check-label" for="q20a3">Good Night</label>
+                </div>
+            </div>
+        </div>
+    
+    <a href="{% url 'edu_app:quizresult' %}">
+    <div class="d-flex justify-content-end mb-4">
+        <button class="btn btn-primary" onclick="alert('Terima kasih telah mengikuti kuis!')">Kirim Kuis</button>
+    </div>
+</div>
+</a>
+</form>
+
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+</body>
+</html>
+

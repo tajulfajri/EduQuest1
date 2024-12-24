@@ -1,0 +1,176 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+  }
+  
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 240px 1fr 300px; /* Sidebar, Main Content, Right Sidebar */
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .reminders {
+    width: 300px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.reminders h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    margin-right: 32px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.reminder-icon {
+    font-size: 20px;
+    color: #555;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.reminder-text p {
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reminder-text span {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+  /* Sidebar */
+  .sidebar {
+    background-color: #eaf5f4;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .sidebar-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .nav-link {
+    color: #319eb2;
+    margin: 10px 0;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .welcome-section {
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin-top: 10px;
+  }
+  
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .course-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+ 
+    
+  /* Right Sidebar (Schedule) */
+  .schedule {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-section img.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: black; /* Warna teks sesuai desain */
+    text-decoration: none; /* Menghilangkan garis bawah */
+  }
+  
+  /* Mengatur warna saat di-hover */
+  a:hover {
+    color: #237b85; /* Warna lebih gelap saat hover */
+    text-decoration: underline; /* Garis bawah hanya saat hover (opsional) */
+  }
+  .nav-link {
+    color: #319eb2; /* Warna link */
+    text-decoration: none; /* Hilangkan garis bawah */
+  }
+  
+  .nav-link:hover {
+    color: #237b85; /* Warna saat hover */
+    text-decoration: underline; /* Opsional: Garis bawah saat hover */
+  }
+  
+  .gamification {
+    display: flex;
+    flex-direction: column; /* Menyusun item secara vertikal */
+    align-items: center; /* Memastikan item sejajar tengah */
+    margin-top: 20px;
+  }
+  
+h6 {
+  color: #237b85;
+  text-align: justify;
+}
+
+  .gamification-item {
+    background-color: #f8f9fa; /* Warna latar untuk kartu */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 30px; /* Menambah padding agar lebih besar */
+    text-align: center;
+    width: 150px; /* Lebar tetap untuk setiap kartu, lebih lebar dari sebelumnya */
+    margin-bottom: 15px; /* Jarak antara setiap item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gamification-item .icon {
+    font-size: 32px; /* Ukuran ikon lebih besar */
+    margin-bottom: 10px;
+  }
+  
+  .gamification-item .value {
+    font-size: 18px; /* Ukuran angka lebih besar */
+    font-weight: bold;
+    color: #319eb2; /* Warna teks angka */
+  }
+  

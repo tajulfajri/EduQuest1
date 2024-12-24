@@ -1,0 +1,93 @@
+.dropdown-toggle {
+    color: white; /* Mengatur warna teks dropdown menjadi putih */
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa; /* Ubah warna latar belakang dropdown sesuai kebutuhan */
+}
+
+.dropdown-item:hover {
+    background-color: #e9ecef; /* Warna latar belakang saat hover */
+}
+
+.custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+margin-top: -20px;
+ position: absolute;
+    /*margin-right: auto;  Posisikan tombol di paling kiri */
+  left: 12px; /* Hilangkan padding kiri */
+    cursor: pointer;
+}
+
+.center-container {
+    display: flex; /* Menggunakan flex untuk menempatkan My Course dan dropdown dalam satu baris */
+    align-items: center; /* Memastikan elemen di tengah secara vertikal */
+}
+
+.text-white {
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+.fw-bold {
+    font-weight: bold; /* Mengatur teks menjadi bold */
+}
+
+.custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+}
+
+.course-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    margin: 30px;
+}
+
+.custom-icon {
+    position: relative;
+    top: 10px; /* Geser ke bawah */
+    left: 10px; /* Geser ke kanan */
+}
+.course-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.course-info {
+    flex-grow: 1;
+}
+.course-info h5 {
+    margin: 0;
+    font-weight: bold;
+}
+.course-info .tags span {
+    background-color: #e7f1ff;
+    color: #1a73e8;
+    padding: 2px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+.course-info .date,
+.course-info .rating {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.view-more-btn {
+    background-color: #fdb417;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}

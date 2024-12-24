@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My number is ten</title>
+  <link rel="stylesheet" href="{% static 'css/materimodul1.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar Utama -->
+  <nav class="navbar navbar-expand-lg bg-info py-3">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'edu_app:class4' %}">
+        <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+        </button>
+      </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center">
+        <h5 class="text-white fw-bold mb-0">Modul 1 : My number is ten</h5>
+      </div>
+    </div>
+  </nav>
+
+  <div class="video-container" >
+    <iframe 
+    width="660" 
+    height="415" 
+    src="https://www.youtube.com/embed/{{ video_id }}" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+</div>
+
+  <!-- Kartu di luar kontainer -->
+  <div class="card w-100 mb-3"> <!-- Menggunakan w-100 untuk lebar penuh -->
+    <div class="card-body">
+      <h5 class="card-title">Capaian Pembelajaran</h5>
+      <p class="card-text">Menyimak  dan Berbicara </p> 
+        <ul>
+          <li>
+            Peserta didik menggunakan bahasa Inggris sederhana untuk berinteraksi dalam situasi sosial dan kelas seperti berkenalan, memberikan informasi diri, mengucapkan salam dan selamat tinggal. 
+          </li>
+          <li>
+            Peserta didik merespon instruksi sederhana (dengan bantuan visual) melalui gerakan tubuh atau menjawab pertanyaan pendek sederhana dengan kata, frase atau kalimat sederhana. 
+          </li>
+          <li>
+            Peserta didik memahami ide pokok dari informasi yang disampaikan secara lisan dengan bantuan visual dan menggunakan kosa kata sederhana. 
+          </li>
+          <li>
+            Peserta didik menggunakan alat bantu visual untuk membantu mereka berkomunikasi.
+          </li>
+        </ul> 
+        
+      
+        <h5 class="card-title">Rangkuman</h5>
+        <h5 class="card-title">Quiz</h5>
+        <a href="{% url 'edu_app:quizmodul1class4' %}" class="btn btn-primary">Kerjakan Quiz</a>
+    </div>
+  </div>
+</body>
+</html>

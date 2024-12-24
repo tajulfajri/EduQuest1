@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <i class="icon-logo"></i>
+      </div>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="{% url 'edu_app:profil' %}">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'edu_app:dashboard' %}">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'edu_app:courses' %}">Classes</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'edu_app:home' %}">Logout</a></li>
+      </ul>
+      <br><br><br><br>
+      <img src="{% static 'img/Bye-unscreen.gif' %}" alt="GIF Description" width="200" height="100">
+      <h6>Semakin banyak kamu membaca, semakin banyak yang kamu tahu. Semakin banyak yang kamu pelajari, semakin banyak tempat yang akan kamu kunjungi. </h6>
+        <h6>- Dr. Seuss</h6>
+      <br><br><br>
+      <img src="{% static 'img/kids.gif' %}" alt="GIF Description" width="200" height="90">
+      <h6>"Struggle the you do today is the single way to build a better future"</h6>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="welcome-section">
+        <h1>Halo {{ user.first_name }}</h1>
+        <p>Selamat datang di Platform belajar EduQuest, Ayo mulai petualangan Bahasa Inggris mu!</p>
+      </div>
+      <div class="courses-container">
+        <a href="{% url 'edu_app:kosakata' %}">
+        <div class="course-card">
+          <h3>Vocabulary</h3>
+          <p>100 Kosa Kata <br> Di lengkapi bahasa inggris dan artinya!</p>
+        </div>
+      </a>
+       
+      <a href="{% url 'edu_app:leaderboard' %}">
+      <div class="course-card">
+          <h3>Leaderboard</h3>
+          <p>Lihat Tingkatan score mu!<br>Study Time: 48hrs<br>Cost: Free</p>
+        </div>
+        </a>
+
+        <a href="{% url 'edu_app:hasilquiz' %}">
+        <div class="course-card">
+          <h3>History Quiz</h3>
+          <p>Cek nilai-nilai Quiz yang sudah kamu kerjakan sebelumnya!</p>
+        </div>
+      </a>
+      <a href="{% url 'edu_app:progressbelajar' %}">
+        <div class="course-card">
+          <h3>Progress Belajar</h3>
+          <p>Cek Progress Belajar kamu yuk, Tetap teruskan belajar!</p>
+        </div>
+      </a>
+    
+      <h4 style="margin-top: 20px;">Tips</h4>
+      <br>
+      <a href="{% url 'edu_app:belajarmenyenangkan' %}">
+      <div class="alert alert-primary" role="alert">
+        How to build enthusiasm for learning?
+      </div>
+    </a>
+    <a href="{% url 'edu_app:manajemenwaktu' %}">
+    <div class="alert alert-secondary" role="alert">
+      How to manage time well for a student?
+      </div>
+    </a> 
+    <a href="{% url 'edu_app:minatbakat' %}">
+    <div class="alert alert-success" role="alert">
+        How to Find Your Interests, Talents and Potential
+      </div>
+    </a>
+        <a href="{% url 'edu_app:Inggrismudah' %}">
+      <div class="alert alert-danger" role="alert">
+        How to make English easy and fun?
+      </div>
+    </a>
+     
+    </main>
+
+    <aside class="schedule">
+      <div class="profile-section text-center">
+        {% if profile.profile_image %}
+        <img src="{{ profile.profile_image.url }}" alt="Profile Picture" id="sidebarProfileImage" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3.5px solid #237b85">
+        
+        {% else %}
+        <img src="{% static 'images/default-profile.png' %}" alt="Default Profile Picture" id="sidebarProfileImage" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3.5px solid #88c8e3">
+        {% endif %}
+       <h5>{{ user.first_name }}</h5>
+        <p>Student</p>
+        <br><br>
+        <div class="reminders">
+          <h3>Reminders</h3>
+          <div class="reminder-item">
+              <i class="bi bi-bell reminder-icon"></i>
+              <div class="reminder-text">
+                  <p>Eng - Vocabulary Test</p>
+                  <span>08 Feb 2025, Friday</span>
+              </div>
+          </div>
+          <div class="reminder-item">
+              <i class="bi bi-bell reminder-icon"></i>
+              <div class="reminder-text">
+                  <p>Eng - Written Class</p>
+                  <span>16 Jan 2025, Friday</span>
+              </div>
+          </div>
+          <div class="reminder-item">
+              <i class="bi bi-bell reminder-icon"></i>
+              <div class="reminder-text">
+                  <p>Eng - Speaking Class</p>
+                  <span>22 Apr 2025, Friday</span>
+              </div>
+          </div>
+      </div>
+          
+<br><br><br>
+        <div id="calendar"></div>
+
+    </aside>
+  <script>
+    function createCalendar(year, month) {
+      const calendar = document.getElementById("calendar");
+      calendar.innerHTML = ""; // Reset content
+    
+      const date = new Date(year, month);
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+    
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+    
+      // Header
+      const header = document.createElement("h2");
+      header.textContent = `${monthNames[month]} ${year}`;
+      calendar.appendChild(header);
+    
+      // Weekdays
+      const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      const weekdayRow = document.createElement("div");
+      weekdayRow.style.display = "flex";
+      weekdayRow.style.justifyContent = "space-between";
+      weekdays.forEach(day => {
+        const cell = document.createElement("div");
+        cell.textContent = day;
+        cell.style.width = "14%";
+        weekdayRow.appendChild(cell);
+      });
+      calendar.appendChild(weekdayRow);
+    
+      // Days
+      const daysRow = document.createElement("div");
+      daysRow.style.display = "flex";
+      daysRow.style.flexWrap = "wrap";
+      for (let i = 0; i < date.getDay(); i++) {
+        const emptyCell = document.createElement("div");
+        emptyCell.style.width = "14%";
+        daysRow.appendChild(emptyCell);
+      }
+    
+      for (let day = 1; day <= daysInMonth; day++) {
+        const dayCell = document.createElement("div");
+        dayCell.textContent = day;
+        dayCell.style.width = "14%";
+        dayCell.style.textAlign = "center";
+        dayCell.style.padding = "5px";
+        dayCell.style.border = "1px solid #ddd";
+        daysRow.appendChild(dayCell);
+      }
+      calendar.appendChild(daysRow);
+    }
+    
+    // Initialize with current month
+    const now = new Date();
+    createCalendar(now.getFullYear(), now.getMonth());
+    
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

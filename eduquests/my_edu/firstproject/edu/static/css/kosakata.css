@@ -1,0 +1,78 @@
+.custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  margin-top: -20px;
+  position: absolute;
+    /*margin-right: auto;  Posisikan tombol di paling kiri */
+  left: 12px; /* Hilangkan padding kiri */
+    cursor: pointer;
+  }
+  .text-white {
+    color: white; /* Mengatur warna teks menjadi putih */
+  }
+  .custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+  }
+  .custom-table {
+    width: 70%; /* Sesuaikan ukuran */
+    margin: 0 auto; /* Agar tabel tetap di tengah */
+  }
+  /* Membuat tabel berada di tengah */
+  .container.my-3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 30%;
+    max-width: 400px;
+  }
+  
+  .table-container {
+    width: 100%;
+    padding: 0 10px;
+    margin: auto;
+  }
+  
+  .table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+
+  .table tbody td {
+    width: 33.33%; /* Konsistensi lebar kolom */ /* Lebar minimal */
+    max-width: 1fr; /* Lebar fleksibel */
+  }
+  
+  .table th,
+  .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    word-wrap: break-word;
+  }
+  
+  .table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    width: 33.33%;
+  }
+  
+  .table tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .search-input {
+      width: 100%;
+    }
+  }
+  

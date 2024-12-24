@@ -1,0 +1,73 @@
+
+.custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  margin-top: -20px;
+  position: absolute;
+    /*margin-right: auto;  Posisikan tombol di paling kiri */
+  left: 12px; /* Hilangkan padding kiri */
+    cursor: pointer;
+  }
+  .text-white {
+    color: white; /* Mengatur warna teks menjadi putih */
+  }
+  .custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+  }
+  
+    .main-navbar .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+      /* Navbar Utama */
+      .main-navbar {
+          background-color: #319eb2;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .navbar-brand {
+          text-align: center;
+          margin: 0 auto;
+        }
+        .navbar-nav {
+          justify-content: center; /* Pusatkan menu */
+          width: 100%;
+        }
+    
+   
+        .custom-icon {
+            position: relative;
+            top: 10px; /* Geser ke bawah */
+            left: 10px; /* Geser ke kanan */
+        }
+        .card {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1205px; /* Batasi lebar maksimal */
+            margin: 25px auto; /* Memusatkan kartu dengan margin otomatis */
+        }
+        
+        .form-check {
+            margin-bottom: 15px; /* Jarak antar opsi radio */
+        }
+        
+        .form-check-input {
+            cursor: pointer; /* Menambahkan kursor pointer saat hover pada input */
+        }
+        
+        .btn-primary {
+            background-color: #007bff; /* Warna latar belakang tombol */
+            border-color: #007bff; /* Warna batas tombol */
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3; /* Warna latar belakang tombol saat hover */
+            border-color: #004085; /* Warna batas tombol saat hover */
+        }
+        

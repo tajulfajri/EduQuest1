@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <title>Quiz : Where Is My Pencil?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+   {%endblock %}
+    
+</head>
+<body>
+
+    {% block content %}
+    <!-- Navbar Utama -->
+  <nav class="navbar navbar-expand-lg bg-info py-3">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'edu_app:modul1class6' %}">
+        <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+        </button>
+      </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center">
+        <h5 class="text-white fw-bold mb-0">Quiz : Where Is My Pencil?</h5>
+      </div>
+    </div>
+  </nav>
+  
+  <form method="post" action="{% url 'edu_app:quizmodul1class6' %}">
+    {% csrf_token %}
+    <input type="hidden" name="quiz_name" value="Modul 1">
+
+  <div class="container mt-4">
+    <div class="card">
+        <div class="card-body ">
+            1.	Where is the book? It is _____ the table. 
+            <div class="form-check mt-3 ">
+                <input class="form-check-input" type="radio" name="question1" value="A" id="question1-option1" >
+                <label class="form-check-label" for="question1-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="B" id="question1-option2" >
+                <label class="form-check-label" for="question1-option2">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question1" value="C" id="question1-option3" >
+                <label class="form-check-label" for="question1-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            2.	The cat is sleeping _____ the chair. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question2" value="A" id="question2-option1">
+                <label class="form-check-label" for="question2-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="B" id="question2-option2">
+                <label class="form-check-label" for="question2-option2">Under</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question2" value="C" id="question2-option3">
+                <label class="form-check-label" for="question2-option3">In</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            3.	The pencils are _____ the pencil case. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question3" value="A" id="question3-option1">
+                <label class="form-check-label" for="question3-option1">Under</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="B" id="question3-option2">
+                <label class="form-check-label" for="question3-option2">Beside</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question3" value="C" id="question3-option3">
+                <label class="form-check-label" for="question3-option3">In</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            4.	There is a picture _____ the wall. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question4" value="A" id="question4-option1">
+                <label class="form-check-label" for="question4-option1">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="B" id="question4-option2">
+                <label class="form-check-label" for="question4-option2">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question4" value="C" id="question4-option3">
+                <label class="form-check-label" for="question4-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            5.	The shoes are _____ the bed. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question5" value="A" id="question5-option1">
+                <label class="form-check-label" for="question5-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="B" id="question5-option2">
+                <label class="form-check-label" for="question5-option2">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question5" value="C" id="question5-option3">
+                <label class="form-check-label" for="question5-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            6.	Where is the clock? It is _____ the wall. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question6" value="A" id="question6-option1">
+                <label class="form-check-label" for="question6-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="B" id="question6-option2">
+                <label class="form-check-label" for="question6-option2">Under</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question6" value="C" id="question6-option3">
+                <label class="form-check-label" for="question6-option3">In</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body"> 
+        7.	The dog is hiding _____ the table. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question7" value="A" id="question7-option1">
+                <label class="form-check-label" for="question7-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="B" id="question7-option2">
+                <label class="form-check-label" for="question7-option2">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question7" value="C" id="question7-option3">
+                <label class="form-check-label" for="question7-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            8.	The toys are _____ the box. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question8" value="A" id="question8-option1">
+                <label class="form-check-label" for="question8-option1">Under</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="B" id="question8-option2">
+                <label class="form-check-label" for="question8-option2">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question8" value="C" id="question8-option3">
+                <label class="form-check-label" for="question8-option3">On</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body ">       
+        9.	The computer is _____ the desk. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question9" value="A" id="question9-option1">
+                <label class="form-check-label" for="question9-option1">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9" value="B" id="question9-option2">
+                <label class="form-check-label" for="question9-option2">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question9"  value="C" id="question9-option3">
+                <label class="form-check-label" for="question9-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            10.	Where is the ball? It is _____ the bag. 
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="question10" value="A" id="question10-option1">
+                <label class="form-check-label" for="question10-option1">In</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="B" id="question10-option2">
+                <label class="form-check-label" for="question10-option2">On</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="question10" value="C" id="question10-option3">
+                <label class="form-check-label" for="question10-option3">Under</label>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="container mt-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                11.	The lamp is _____ the table. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question11" value="A" id="q11a1">
+                    <label class="form-check-label" for="q11a1">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="B" id="q11a2">
+                    <label class="form-check-label" for="q11a2">Under</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question11" value="C" id="q11a3">
+                    <label class="form-check-label" for="q11a3">Beside</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                12.	The books are _____ the shelf
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question12" value="A" id="q12a1">
+                    <label class="form-check-label" for="q12a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12" value="B" id="q12a2">
+                    <label class="form-check-label" for="q12a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question12"  value="C" id="q12a3">
+                    <label class="form-check-label" for="q12a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                13.	Where is the cat? It is _____ the box. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question13" value="A" id="q13a1">
+                    <label class="form-check-label" for="q13a1">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="B" id="q13a2">
+                    <label class="form-check-label" for="q13a2">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question13" value="C" id="q13a3">
+                    <label class="form-check-label" for="q13a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                14.	The bag is _____ the chair. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question14" value="A" id="q14a1">
+                    <label class="form-check-label" for="q14a1">Under</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="B" id="q14a2">
+                    <label class="form-check-label" for="q14a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question14" value="C" id="q14a3">
+                    <label class="form-check-label" for="q14a3">In</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                15.	There is a pen _____ the notebook. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question15" value="A" id="q15a1">
+                    <label class="form-check-label" for="q15a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="B" id="q15a2">
+                    <label class="form-check-label" for="q15a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question15" value="C" id="q15a3">
+                    <label class="form-check-label" for="q15a3">Under</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-3">
+            <div class="card-body">
+                16.	The ball is _____ the chair.  
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question16" value="A" id="q16a1">
+                    <label class="form-check-label" for="q16a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="B" id="q16a2">
+                    <label class="form-check-label" for="q16a2">Under</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question16" value="C" id="q16a3">
+                    <label class="form-check-label" for="q16a3">On</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                17.	The vase is _____ the table.
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question17" value="A" id="q17a1">
+                    <label class="form-check-label" for="q17a1">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="B" id="q17a2">
+                    <label class="form-check-label" for="q17a2">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question17" value="C" id="q17a3">
+                    <label class="form-check-label" for="q17a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                18.	The bird is _____ the tree. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question18" value="A" id="q18a1">
+                    <label class="form-check-label" for="q18a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="B" id="q18a2">
+                    <label class="form-check-label" for="q18a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question18" value="C" id="q18a3">
+                    <label class="form-check-label" for="q18a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                19.	The keys are _____ the drawer. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question19" value="A" id="q19a1">
+                    <label class="form-check-label" for="q19a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="B" id="q19a2">
+                    <label class="form-check-label" for="q19a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question19" value="C" id="q19a3">
+                    <label class="form-check-label" for="q19a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3">
+            <div class="card-body">
+                20.	Where is the magazine? It is _____ the sofa. 
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="question20" value="A" id="q20a1">
+                    <label class="form-check-label" for="q20a1">In</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="B" id="q20a2">
+                    <label class="form-check-label" for="q20a2">On</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question20" value="C" id="q20a3">
+                    <label class="form-check-label" for="q20a3">Under</label>
+                </div>
+            </div>
+        </div>
+    
+    <a href="{% url 'edu_app:quizresult' %}">
+    <div class="d-flex justify-content-end mb-4">
+        <button class="btn btn-primary" onclick="alert('Terima kasih telah mengikuti kuis!')">Kirim Kuis</button>
+    </div>
+</div>
+</a>
+</form>
+        
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+</body>
+</html>
+

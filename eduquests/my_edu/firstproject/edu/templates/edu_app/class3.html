@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Class 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Tambahkan ini untuk Bootstrap Icons -->
+    <link rel="stylesheet" href="{% static 'css/class.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-info py-3">
+        <div class="container d-flex align-items-center"> <!-- Tetap d-flex untuk container -->
+            <!-- Button Panah Kiri -->
+            <a href="{% url 'edu_app:courses' %}">
+            <button class="custom-button me-2">
+                <i class="bi bi-arrow-left custom-icon"></i>
+            </button>
+        </a>
+            <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center"> <!-- Flex untuk menempatkan di tengah -->
+                <h5 class="text-white fw-bold mb-0">My Course</h5> <!-- Menggunakan mb-0 untuk menghilangkan margin bawah -->
+               
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Card 1 -->
+   
+    <div class="course-card">
+        <img src="{% static 'img/angka1.jpg' %}" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 1 : My Name Is Joshua</h5>
+         <p>Peserta didik reguler/tipikal</p>
+        
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 20 July</span>
+                <span class="rating">⭐ 4.6</span>
+            </div>
+        </div>
+        <a href="{% url 'edu_app:materimodul1class3' %}">
+        <button class="view-more-btn">Mulai Belajar</button>
+    </a>
+    </div>
+
+
+    <!-- Card 2 -->
+    <div class="course-card">
+        <img src="{% static 'img/angka2.jpg' %}" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 2 : Do You Like Apple?</h5>
+            <p>Peserta didik reguler/tipikal</p>
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 22 July</span>
+                <span class="rating">⭐ 4.8</span>
+            </div>
+        </div>
+        <a href="{% url 'edu_app:materimodul2' %}">
+        <button class="view-more-btn" >Mulai Belajar</button>
+    </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="course-card">
+        <img src="{% static 'img/angka3.jpg' %}" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 3 : My Name Is Joshua</h5>
+            <p>Peserta didik reguler/tipikal</p>
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 26 July</span>
+                <span class="rating">⭐ 4.3</span>
+            </div>
+        </div>
+        <a href="{% url 'edu_app:materimodul3' %}">
+        <button class="view-more-btn">Mulai Belajar</button>
+        </a>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="course-card">
+        <img src="{% static 'img/angka4.jpg' %}"" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 4 : My Number Is Ten</h5>
+            <p>Peserta didik reguler/tipikal</p>
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 30 July</span>
+                <span class="rating">⭐ 4.7</span>
+            </div>
+        </div>
+        <a href="../materikelas1/materimodul4.html">
+        <button class="view-more-btn">Mulai Belajar</button>
+    </a>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="course-card">
+        <img src="{% static 'img/angka5.jpg' %}" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 5 : How Many Books Are There On The Booksshelf?</h5>
+            <p>Peserta didik reguler/tipikal</p>
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 2 August</span>
+                <span class="rating">⭐ 4.9</span>
+            </div>
+        </div>
+        <a href="../materikelas1/materimodul5.html">
+        <button class="view-more-btn">Mulai Belajar</button>
+    </a>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="course-card">
+        <img src="{% static 'img/angka6.jpg' %}" alt="Course Image">
+        <div class="course-info">
+            <h5>Modul 6 : Where Is My Pencil?</h5>
+            <p>Introduction to marketing basics for small businesses</p>
+            <div class="tags">
+                <span>Menyimak</span>
+                <span>Berbicara</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="date">Start: 5 August</span>
+                <span class="rating">⭐ 4.5</span>
+            </div>
+        </div>
+        <a href="../materikelas1/materimodul6.html">
+        <button class="view-more-btn">Mulai Belajar</button>
+    </a>
+    </div>    
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+  /* Navbar start */
+  .hero-box .box p {
+    width: 500px;
+  }
+  
+  .hero-box .box img {
+    width: 400px;
+  }
+  
+  .sign a{
+    background-color: #e4a634;
+  }
+  
+  .sign a:hover{
+    background-color: #e4cf34;
+  }
+  
+  
+  @media (max-width: 992px) {
+    .hero-box .box p {
+      font-size: 14px;
+      width: 300px;
+    }
+  
+    .hero-box .box img {
+      width: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 50px;
+    }
+  
+    .hero-box {
+      text-align: center;
+    }
+  
+    .hero-box .box p {
+      width: 100%;
+    }
+  }
+  /* navbar end */
+      .course {
+      width: 100%; /* Mengatur lebar div menjadi 100% dari kontainer induk */
+      height: 300px; /* Mengatur tinggi div sesuai keinginan */
+      overflow: hidden; /* Untuk memotong gambar jika terlalu besar */
+  }
+  
+  .course img {
+      width: 100%; /* Gambar memenuhi lebar div */
+      height: 100%; /* Gambar memenuhi tinggi div */
+      object-fit: cover; /* Gambar dipotong agar sesuai tanpa merusak proporsi */
+  }
+  
+  .img-container {
+    text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        transition: all 0.3s ease;
+        width: 80px;
+    }
+    
+    .img-container:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        transform: scale(1.05);
+    }
+  
+  
+  .image-section{
+   
+    display: flex; /* Mengatur elemen di dalamnya agar tersusun secara horizontal */
+    justify-content:center; /* Mengatur jarak antara gambar agar tersebar merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    gap: 10px; /* Memberikan jarak antar elemen */
+  }
+  
+ 
+  .fs-5{
+    text-align: center;
+     font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .fs-2{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  .top {
+    margin-top: 50px;
+  }
+
+  /* Gaya untuk modal */
+#enrollModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+}
+
+/* Konten modal dengan gaya card */
+.modal-content {
+  background-color: #f8f9fa; /* Warna card yang cerah */
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 40%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Bayangan lembut */
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Garis lembut seperti card */
+}
+
+/* Judul modal */
+.modal-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff; /* Warna teks gelap */
+  margin-bottom: 15px;
+}
+
+/* Teks paragraf */
+.modal-content p {
+  font-size: 16px;
+  color: #fff; /* Warna teks netral */
+  margin-bottom: 20px;
+}
+
+/* Tombol close */
+.close {
+  color: #ff5252; /* Warna merah terang */
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #d32f2f; /* Warna merah gelap untuk hover */
+}
+
+/* Tombol dengan gaya */
+.btn-primary {
+  display: inline-block;
+  background-color: yellow; /* Hijau terang */
+  color: blue;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #388e3c; /* Hijau lebih gelap */
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: #2196f3; /* Biru terang */
+  color: yellow;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #1976d2; /* Biru lebih gelap */
+}
+
+
+  /* footer start */
+  .footer {
+    margin-top: 100px;
+    padding-bottom: 20px;
+    padding-top: 3rem;
+  }
+  
+  .footer-box .row .col:nth-child(2) a {
+    opacity: 75%;
+  }
+  
+  .footer-box .row .col:nth-child(2) a:hover {
+    opacity: 100%;
+  }
+  
+  .copyright {
+    margin-top: 60px;
+  }
+
+  .footer .b1 {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    color: white; 
+    line-height: 1;
+  }
+  /* footer end */
+  
